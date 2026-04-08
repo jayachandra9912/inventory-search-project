@@ -9,9 +9,11 @@ app.get("/", (req, res) => {
   res.send("Server running");
 });
 
-app.listen(5000, () => {
-  console.log("Server started on port 5000");
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log("Server running");
 });
+
 
 app.get("/search", (req, res) => {
   let { q, category, minPrice, maxPrice } = req.query;

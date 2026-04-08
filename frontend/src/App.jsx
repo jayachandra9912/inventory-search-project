@@ -17,7 +17,7 @@ function App() {
     if (minPrice) params.append("minPrice", minPrice);
     if (maxPrice) params.append("maxPrice", maxPrice);
 
-    const res = await fetch(`http://localhost:5000/search?${params}`);
+    const res = await ffetch(`https://inventory-search-project-4hqb.onrender.com/search?${params}`)
     const data = await res.json();
 
     setProducts(data);
